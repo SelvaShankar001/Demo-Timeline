@@ -1,0 +1,140 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    background-color: blanchedalmond;
+}
+section#timeline{
+    width: 80%;
+    position: relative;
+    /* border: 1px solid black; */
+    margin: 20px;
+}
+section#timeline::before{
+    content: "";
+    background-color:red;
+    width: 5px;
+    height: 100%;
+    /* display: block; */
+    position: absolute;
+    left: 50%;
+    animation-name: Line;
+    animation-duration: 5s;
+}
+section#timeline article{
+    width: 100%;
+    margin: 0 0 20px 0;
+    position: relative;
+}
+section#timeline article::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.inner1{
+    float: left;
+    width: 40%;
+    border: 2px solid blue;
+    padding: 20px;
+    background-color:aliceblue ;
+}
+.inner2{
+    float: right;
+    width: 40%;
+    border: 2px solid blue;
+    padding: 20px;
+    background-color:aliceblue ;
+}
+.inner3{
+    float: left;
+    width: 40%;
+    border: 2px solid blue;
+    padding: 20px;
+    background-color:aliceblue ;
+}
+.inner4{
+    float: right;
+    width: 40%;
+    border: 2px solid blue;
+    padding: 20px;
+    background-color:aliceblue ;
+}
+.inner1::after{
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 100px;
+    background-color: blue;
+    left: 38%;
+    top: 5%;
+    rotate: -45deg;
+    z-index:-1;
+}
+.inner2::after{
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 100px;
+    background-color: blue;
+    right: 38%;
+    top: 5%;
+    rotate: -45deg;
+    z-index:-1;
+}
+.inner3::after{
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 100px;
+    background-color: blue;
+    left: 38%;
+    top: 5%;
+    rotate: -45deg;
+    z-index:-1;
+}
+.inner4::after{
+    content: "";
+    position: absolute;
+    width: 80px;
+    height: 100px;
+    background-color: blue;
+    right: 38%;
+    top: 5%;
+    rotate: -45deg;
+    z-index:-1;
+}
+@keyframes Line{
+    0%{
+        height: 0%;
+    }
+    50%{
+        height: 50%;
+    }
+    70%{
+        height: 70%;
+    }
+    100%{
+        height: 100%;
+    }
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    background: rgb(2,0,36);
+    background: radial-gradient(circle, rgba(2,0,36,1) 0%, rgba(121,54,9,1) 35%, rgba(0,212,255,1) 100%);
+    animation-name: grad;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+@keyframes grad{
+    0%{
+        background: rgb(34,193,195);
+        background: linear-gradient(0deg, rgba(34,193,195,1) 0%, rgba(253,187,45,1) 100%);;
+    }
+    75%{
+        background: rgb(238,174,202);
+        background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+    }
+}
